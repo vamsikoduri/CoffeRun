@@ -25,17 +25,7 @@
                 console.log(item.name + " is " + item.value);
             })
 
-            debugger;
-            $("#myModal").modal();
-            
-            $("#save").on("click", function(e){
-               e.preventDefault(); 
-               var updatedText = $("[name='sampleTextValue']").val()
-               data["updatedText"] = updatedText
-               $("#myModal").modal('hide');
-                
-              });
-
+           
             console.log(data);
             //fn(data);
             this.reset();
