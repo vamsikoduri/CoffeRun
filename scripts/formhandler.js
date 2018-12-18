@@ -14,7 +14,8 @@
         }
     }
 
-    FormHandler.prototype.addSubmitHandler = function (fn) {
+    
+     FormHandler.prototype.addSubmitHandler = function (fn) {
         console.log('Setting submit handler for form');
 
         this.$formElement.on('submit', function (event) {
@@ -27,18 +28,17 @@
 
            
             console.log(data);
-            //fn(data);
+            fn(data);
             this.reset();
             this.elements[0].focus();
            
 
         });
 
-    }
+    } 
 
 
     FormHandler.prototype.addSliderHandler = function () {
-        debugger;
         this.$slider = $('[data-coffee-order="slider"]');
         this.$slider.on('click', function (event) {
             event.preventDefault();
